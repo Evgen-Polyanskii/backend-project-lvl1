@@ -1,0 +1,26 @@
+{
+  "name": "@hexlet/code",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "\"Реализация первого проекта в рамках обучения в Hexlet. Проект «Игры разума» — набор из пяти консольных игр, построенных по принципупопулярных мобильных приложений для прокачки мозга.\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Evgen-Polyanskii/backend-project-lvl1.git"
+  },
+  "keywords": [
+    "Игры",
+    "разума",
+    "Brain",
+    "games"
+  ],
+  "author": "Evgeny Polyanskii",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Evgen-Polyanskii/backend-project-lvl1/issues"
+  },
+  "homepage": "https://github.com/Evgen-Polyanskii/backend-project-lvl1#readme"
+}
