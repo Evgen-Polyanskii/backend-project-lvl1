@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "type": "module",
   "description": "\"Реализация первого проекта в рамках обучения в Hexlet. Проект «Игры разума» — набор из пяти консольных игр, построенных по принципупопулярных мобильных приложений для прокачки мозга.\"",
+  "bin": {
+    "brain-games": "bin/brain-games.js"
+  },
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
