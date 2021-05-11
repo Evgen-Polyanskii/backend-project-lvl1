@@ -5,5 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      run: make lint
+      - name: Run linter
+          run: |
+          make lint
       
