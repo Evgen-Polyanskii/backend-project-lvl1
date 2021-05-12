@@ -1,12 +1,19 @@
-name: Node CI
+name: NodeJS CI
 
-on:
+on: 
   - push
   - pull_request
 
 jobs:
-  build:
+  Linter_verification:
+    name: Linter verification
     runs-on: ubuntu-latest
+  
     steps:
-      - name: Run linter
-        run: make lint  
+       - name: Check out repository
+         uses: actions/checkout@v2
+       - name: Check Eslint
+         run: make lint
+    
+  
+  
