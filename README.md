@@ -5,4 +5,4 @@
 [![Node CI](https://github.com/Evgen-Polyanskii/backend-project-lvl1/actions/workflows/ci.yml/badge.svg)](https://github.com/Evgen-Polyanskii/backend-project-lvl1/actions)
 
 Example of installing the package and running the game "brain-even"
-[![asciicast]("https://asciinema.org/a/n9tfn1Y6UzyzZyIumFu2o1csM")
+[![asciicast]("https://asciinema.org/a/n9tfn1Y6UzyzZyIumFu2o1csM.svg")](https://asciinema.org/a/n9tfn1Y6UzyzZyIumFu2o1csM)
