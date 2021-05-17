@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import game from '../src/checkForParity.js';
+import gameEven from '../src/games/even.js';
 
-game();
+gameEven();
