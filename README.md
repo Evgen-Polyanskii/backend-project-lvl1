@@ -6,3 +6,6 @@
 
 Example of installing the package and running the game "brain-even"
 [![asciicast](https://asciinema.org/a/n9tfn1Y6UzyzZyIumFu2o1csM.svg)](https://asciinema.org/a/n9tfn1Y6UzyzZyIumFu2o1csM)
+
+Example of running the game "brain-calc"
+[![asciicast](https://asciinema.org/a/77lgDCMJCdI5dyrB20fZLhdcg.svg)](https://asciinema.org/a/77lgDCMJCdI5dyrB20fZLhdcg)
