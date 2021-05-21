@@ -7,16 +7,18 @@ const isEvenNumber = (number) => (number % 2 === 0 ? 'yes' : 'no');
 
 const getGameData = () => {
   const gameData = [];
-  let numOfRounds = 0;
-  for (numOfRounds; numOfRounds < 3; numOfRounds += 1) {
-    gameData.push([]);
-    const num = getRundomNumber(1, 100);
-    const correctAnswer = isEvenNumber(num);
-    gameData[numOfRounds].push(num, correctAnswer);
-  }
+  const minValue = 1;
+  const maxValue = 100;
+  const num = getRundomNumber(minValue, maxValue);
+  const correctAnswer = isEvenNumber(num);
+  gameData.push(num, correctAnswer);
   return gameData;
 };
+const data = getGameData;
+/* Записываем в константу data функцию getGameData() с целью последующей передачи
+её в index.js через аргумент функции startGames(). Что позволит index.js в каждом раунде игры
+вызывать функцию getGameData() */
 
 export default () => {
-  startGames(description, getGameData());
+  startGames(description, data);
 };
