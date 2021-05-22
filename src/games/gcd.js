@@ -29,11 +29,7 @@ const getGameData = () => {
   gameData.push(correctAnswer);
   return gameData;
 };
-const data = getGameData;
-/* Записываем в константу data функцию getGameData() с целью последующей передачи
-её в index.js через аргумент функции startGames(). Что позволит index.js в каждом раунде игры
-вызывать функцию getGameData() */
 
 export default () => {
-  startGames(description, data);
+  startGames(description, getGameData);
 };
