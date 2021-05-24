@@ -3,18 +3,18 @@ import getRundomNumber from '../util.js';
 
 const description = 'Find the greatest common divisor of given numbers.';
 
-const getGCD = (num1, num2) => {
+const getAnswer = (num1, num2) => {
   if (Math.max(num1, num2) === 0) {
     return 0;
   }
-  const dev = Math.floor(Math.max(num1, num2) / 2);
+  const denom = Math.floor(Math.max(num1, num2) / 2);
   const calcDevisor = (divisible1, divisible2, devisor) => {
     if ((divisible1 % devisor === 0 && divisible2 % devisor === 0) || devisor === 1) {
       return devisor;
     }
     return calcDevisor(divisible1, divisible2, devisor - 1);
   };
-  return calcDevisor(num1, num2, dev);
+  return calcDevisor(num1, num2, denom);
 };
 
 const getGameData = () => {
@@ -25,7 +25,7 @@ const getGameData = () => {
   const num2 = getRundomNumber(minValue, maxValue);
   const expression = `${num1} ${num2}`;
   gameData.push(expression);
-  const correctAnswer = getGCD(num1, num2);
+  const correctAnswer = getAnswer(num1, num2);
   gameData.push(correctAnswer);
   return gameData;
 };
