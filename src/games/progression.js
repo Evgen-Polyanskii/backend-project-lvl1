@@ -8,6 +8,9 @@ const getProgression = (initialValue, progressionStep, numOfElements) => {
   const calcProgression = (initlValue, progresStep, numOfEl, acc) => {
     if (numOfEl === 0) {
       return acc;
+      /* При numOfEl === 0 переменная acc не добавляется в sum[] так как переменная
+      initialValue будет считаться первым элементом прогрессии, таким образом
+      sum.length === numOfEl */
     }
     sum.push(acc);
     return calcProgression(initlValue, progresStep, numOfEl - 1, acc + progresStep);
@@ -24,7 +27,7 @@ const calcCorrectAnswer = (initialValue, progressionStep, indexOfElToReplace) =>
 const getGameData = () => {
   const gameData = [];
   let minValue = 1;
-  const maxValue = 11;
+  const maxValue = 10;
   const initialValue = getRundomNumber(minValue, maxValue);
   const progressionStep = getRundomNumber(minValue, maxValue);
   minValue = 5;
