@@ -19,7 +19,7 @@ const getProgression = (initialValue, progressionStep, numOfElements) => {
   return sum;
 };
 
-const calcCorrectAnswer = (initialValue, progressionStep, indexOfElToReplace) => {
+const getAnswer = (initialValue, progressionStep, indexOfElToReplace) => {
   const answer = initialValue + indexOfElToReplace * progressionStep;
   return answer;
 };
@@ -37,7 +37,7 @@ const getGameData = () => {
   const indexOfElToReplace = getRundomNumber(minValue, numOfElements);
   progression[indexOfElToReplace] = '..';
   gameData.push(progression.join(' '));
-  const answer = calcCorrectAnswer(initialValue, progressionStep, indexOfElToReplace);
+  const answer = getAnswer(initialValue, progressionStep, indexOfElToReplace);
   gameData.push(answer);
   return gameData;
 };
