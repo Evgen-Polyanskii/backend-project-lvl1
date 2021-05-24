@@ -15,3 +15,6 @@ Example of running the game "brain-gcd"
 
 Example of running the game "brain-progression"
 [![asciicast](https://asciinema.org/a/hUVXP8EL3sY9ipE0l0VvRwpQI.svg)](https://asciinema.org/a/hUVXP8EL3sY9ipE0l0VvRwpQI)
+
+Example of running the game "brain-prime"
+[![asciicast](https://asciinema.org/a/00Fbn5KyB7CFUW0FH8W7BU5lq.svg)](https://asciinema.org/a/00Fbn5KyB7CFUW0FH8W7BU5lq)
