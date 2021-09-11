@@ -25,21 +25,14 @@ const getAnswer = (initialValue, progressionStep, indexOfElToReplace) => {
 };
 
 const getGameData = () => {
-  const gameData = [];
-  let minValue = 1;
-  const maxValue = 10;
-  const initialValue = getRundomNumber(minValue, maxValue);
-  const progressionStep = getRundomNumber(minValue, maxValue);
-  minValue = 5;
-  const numOfElements = getRundomNumber(minValue, maxValue);
+  const initialValue = getRundomNumber(1, 10);
+  const progressionStep = getRundomNumber(1, 10);
+  const numOfElements = getRundomNumber(5, 10);
   const progression = getProgression(initialValue, progressionStep, numOfElements);
-  minValue = 0;
-  const indexOfElToReplace = getRundomNumber(minValue, numOfElements);
+  const indexOfElToReplace = getRundomNumber(0, numOfElements);
   progression[indexOfElToReplace] = '..';
-  gameData.push(progression.join(' '));
   const answer = getAnswer(initialValue, progressionStep, indexOfElToReplace);
-  gameData.push(answer);
-  return gameData;
+  return [progression.join(' '), String(answer)];
 };
 
 export default () => {

@@ -8,26 +8,23 @@ const getAnswer = (num1, num2) => {
     return 0;
   }
   const denom = Math.floor(Math.max(num1, num2) / 2);
-  const calcDevisor = (divisible1, divisible2, devisor) => {
-    if ((divisible1 % devisor === 0 && divisible2 % devisor === 0) || devisor === 1) {
-      return devisor;
+  const calcDivisor = (divisible1, divisible2, divisor) => {
+    if ((divisible1 % divisor === 0 && divisible2 % divisor === 0) || divisor === 1) {
+      return divisor;
     }
-    return calcDevisor(divisible1, divisible2, devisor - 1);
+    return calcDivisor(divisible1, divisible2, divisor - 1);
   };
-  return calcDevisor(num1, num2, denom);
+  return calcDivisor(num1, num2, denom);
 };
 
 const getGameData = () => {
-  const gameData = [];
   const minValue = 1;
   const maxValue = 100;
   const num1 = getRundomNumber(minValue, maxValue);
   const num2 = getRundomNumber(minValue, maxValue);
   const expression = `${num1} ${num2}`;
-  gameData.push(expression);
-  const correctAnswer = getAnswer(num1, num2);
-  gameData.push(correctAnswer);
-  return gameData;
+  const answer = getAnswer(num1, num2);
+  return [expression, String(answer)];
 };
 
 export default () => {

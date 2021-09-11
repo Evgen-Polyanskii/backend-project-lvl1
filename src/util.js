@@ -1,5 +1,2 @@
-const getRundomNumber = (minValue, maxValue) => {
-  const rundomNumber = Math.floor(Math.random() * (maxValue - minValue)) + minValue;
-  return rundomNumber;
-};
-export default getRundomNumber;
+const getRandomNumber = (min, max) => Math.floor(Math.random() * (max + 1 - min)) + min;
+export default getRandomNumber;
