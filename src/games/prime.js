@@ -1,4 +1,4 @@
-import getRundomNumber from '../util.js';
+import getRandomNumber from '../util.js';
 import startGames from '../index.js';
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
@@ -16,9 +16,7 @@ const isPrime = (num) => {
 };
 
 const getGameData = () => {
-  const minValue = 1;
-  const maxValue = 100;
-  const number = getRundomNumber(minValue, maxValue);
+  const number = getRandomNumber(1, 100);
   const answer = isPrime(number) ? 'yes' : 'no';
   return [String(number), answer];
 };

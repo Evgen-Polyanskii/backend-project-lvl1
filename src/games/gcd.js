@@ -1,5 +1,5 @@
 import startGames from '../index.js';
-import getRundomNumber from '../util.js';
+import getRandomNumber from '../util.js';
 
 const description = 'Find the greatest common divisor of given numbers.';
 
@@ -18,10 +18,8 @@ const getAnswer = (num1, num2) => {
 };
 
 const getGameData = () => {
-  const minValue = 1;
-  const maxValue = 100;
-  const num1 = getRundomNumber(minValue, maxValue);
-  const num2 = getRundomNumber(minValue, maxValue);
+  const num1 = getRandomNumber(1, 100);
+  const num2 = getRandomNumber(1, 100);
   const expression = `${num1} ${num2}`;
   const answer = getAnswer(num1, num2);
   return [expression, String(answer)];

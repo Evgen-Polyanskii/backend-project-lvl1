@@ -1,21 +1,23 @@
-import getRundomNumber from '../util.js';
+import getRandomNumber from '../util.js';
 import startGames from '../index.js';
 
 const description = 'What is the result of the expression?';
 
-const getGameData = () => {
+const getMathsOperator = () => {
   const mathsOperators = ['+', '-', '*'];
-  const minValue = 1;
-  const maxValue = 100;
-  const operandA = getRundomNumber(minValue, maxValue);
-  const operandB = getRundomNumber(minValue, maxValue);
-  const minIndexOfOperators = 0;
-  const maxIndexOfOperators = 2;
-  const operators = getRundomNumber(minIndexOfOperators, maxIndexOfOperators);
-  const expression = `${operandA} ${mathsOperators[operators]} ${operandB}`;
+  const maxIndexOfOperators = mathsOperators.length - 1;
+  const indexOfOperator = getRandomNumber(0, maxIndexOfOperators);
+  return mathsOperators[indexOfOperator];
+};
+
+const getGameData = () => {
+  const operandA = getRandomNumber(1, 100);
+  const operandB = getRandomNumber(1, 100);
+  const mathOperator = getMathsOperator();
+  const expression = `${operandA} ${mathOperator} ${operandB}`;
   let answer = 0;
 
-  switch (mathsOperators[operators]) {
+  switch (mathOperator) {
     case '+':
       answer = operandA + operandB;
       break;
