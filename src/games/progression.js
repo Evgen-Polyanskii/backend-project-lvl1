@@ -8,10 +8,7 @@ const getProgression = (initialValue, progressionStep, numOfElements) => {
   return [...(new Array(numOfElements)).keys()].map(A);
 };
 
-const getAnswer = (initialValue, progressionStep, indexOfElToReplace) => {
-  const answer = initialValue + indexOfElToReplace * progressionStep;
-  return answer;
-};
+const getAnswer = (inValue, step, indexOfElToReplace) => inValue + indexOfElToReplace * step;
 
 const getGameData = () => {
   const initialValue = getRandomNumber(1, 10);
