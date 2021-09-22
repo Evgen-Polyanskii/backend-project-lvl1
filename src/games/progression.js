@@ -13,7 +13,7 @@ const getGameData = () => {
   const progressionStep = getRandomNumber(1, 10);
   const numOfElements = getRandomNumber(5, 10);
   const progression = getProgression(initialValue, progressionStep, numOfElements);
-  const indexOfElToReplace = getRandomNumber(0, numOfElements);
+  const indexOfElToReplace = getRandomNumber(0, numOfElements - 1);
   const answer = progression[indexOfElToReplace];
   progression[indexOfElToReplace] = '..';
   return [progression.join(' '), String(answer)];
